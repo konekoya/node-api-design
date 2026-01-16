@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express';
 import prisma from '../db';
-import { Update } from '../../generated/prisma/client';
+import { Update } from '../../generated/prisma';
 
 export const getOneUpdate: RequestHandler = async (req, res) => {
   const update = await prisma.update.findUnique({
